@@ -9,15 +9,15 @@ After completing this lab you will be able to:
 4. Close the database connection
 
 
-#install the connector library
+### install the connector library
 
 !%pip install mysql-connector-python
 
 
-#import the connector
+### import the connector
 import mysql.connector
 
-#create the connection object and cursor object
+### create the connection object and cursor object
 from mysql.connector import Error
 
 
@@ -37,49 +37,49 @@ else:
     print("Error while connecting to MySQL", e)
 
 
-#Construct the Create Table DDL statement 
+### Construct the Create Table DDL statement 
 createQuery = "create table INSTRUCTOR(ID INTEGER PRIMARY KEY NOT NULL, FNAME VARCHAR(20), LNAME VARCHAR(20), CITY VARCHAR(20), CODE CHAR(2))"
 
-#Now fill in the name of the method and execute the statement
+### Now fill in the name of the method and execute the statement
 createStmt = cursor.execute(createQuery)
 
 
-#Construct the query 
+### Construct the query 
 insertQuery = "insert into INSTRUCTOR values (1, 'Rav', 'Ahuja', 'TORONTO', 'CA')"
 selectQuery = "select * from INSTRUCTOR"
 
 
-#execute the insert statement
+### execute the insert statement
 insertStmt = cursor.execute(insertQuery)
 connection.commit()
 selectStmt = cursor.execute(selectQuery)
 cursor.fetchall()
 
 
-#replace ... with the insert statement that inerts the remaining two rows of data
+### replace ... with the insert statement that inerts the remaining two rows of data
 insertQuery2 = "insert into INSTRUCTOR values (2, 'Raul', 'Chong', 'Markham', 'CA'), (3, 'Hima', 'Vasudevan', 'Chicago', 'US')"
 
-#execute the statement
+### execute the statement
 insertStmt2 = cursor.execute(insertQuery2)
 connection.commit()
 selectStmt = cursor.execute(selectQuery)
 cursor.fetchall()
 
 
-#Enter your code below
+### Enter your code below
 updateQuery = "update INSTRUCTOR set CITY='MOOSETOWN' where FNAME='Rav'"
 updateStmt = cursor.execute(updateQuery)
 connection.commit()
 
 
-#Construct the query that retrieves all rows from the INSTRUCTOR table
+### Construct the query that retrieves all rows from the INSTRUCTOR table
 selectQuery = "select * from INSTRUCTOR"
 
-#Execute the statement
+### Execute the statement
 selectStmt = cursor.execute(selectQuery)
 
 
-#Fetch the Dictionary (for the first row only) - replace ... with your code
+### Fetch the Dictionary (for the first row only) - replace ... with your code
 cursor.fetchall()
 
 
@@ -95,3 +95,7 @@ pdf.shape
 cursor.close()
 connection.close()
 print("MySQL connection is closed")
+
+
+
+# Congratulations
