@@ -1,9 +1,9 @@
-# Connecting-MySQL-Database-to-Jupyter-Notebook
+# Connecting-MySQL-Database-to-Jupyter-Notebook IBM Course
 
 ## Objectives
 After completing this lab you will be able to:
 
-Import the ibm_db Python library
-Enter the database connection credentials
-Create the database connection
-Close the database connection
+1. Import the Jupyter Notebook library
+2. Enter the database connection credentials
+3. Create the database connection
+4. Close the database connection
